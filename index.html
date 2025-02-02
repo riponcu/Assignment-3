@@ -38,11 +38,53 @@
 <body class="font-ADlaM">
 
     <!-- Header Section -->
-    <header>
-        <!-- navbar Section -->
-        <nav></nav>
+    <header class="grid grid-cols-1 bg-orange-50 p-4">
+      <div class="flex items-center justify-between px-20 ">
+        <!-- log -->
+         <div class="flexi items-center space-x-2">
+          <img src="c1-assets/logo-header.png" alt="" class="w-10 h-10">
+          <span class="text-xl fond-bold">Browse Pet</span>
+         </div>
+         <!-- center -->
+          <div class="hidden md:flex space-x-6 text-xl font-semibold gap-4">
+            <a href="#" class="hover:text-gray-700">Find a Pet</a>
+            <a href="#" class="hover:text-gray-700">Breeds</a>
+            <a href="#" class="hover:text-gray-700">Contact Us</a>
+          </div>
 
+          <div class="hidden md:flex items-center space-x-4">
+            
+            <button class="relative">
+                <span class="material-icons"></span>
+                <span class="absolute top-0 right-0 bg-red-500 text-white text-xs px-1 rounded-full">3</span>
+            </button>
+            <button class="border-spacing-1"btn btn-warning">Login</button>
+            <button class="bg-yellow-200 rounded-lg p-4 "btn btn-warning">Contact</button>
+          
         
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-xl" id="menu-btn">☰</button>
+      </div>
+
+      <!-- Mobile Dropdown Menu (Initially Hidden) -->
+      <div class="hidden md:hidden flex flex-col items-center mt-4 space-y-3 text-lg font-semibold" id="mobile-menu">
+          <a href="#" class="hover:text-gray-700">Browse</a>
+          <a href="#" class="hover:text-gray-700">Contact</a>
+          <a href="#" class="hover:text-gray-700">PetHome</a>
+          <input type="text" placeholder="Search..." class="px-3 py-1 border rounded w-3/4">
+          <input type="text" placeholder="Search..." class="px-3 py-1 border rounded w-3/4">
+          <button class="bg-blue-500 text-white px-4 py-2 rounded">Login</button>
+          <button class="bg-green-500 text-white px-4 py-2 rounded">Sign Up</button>
+      </div>
+  </nav>
+
+  <script>
+      document.getElementById('menu-btn').addEventListener('click', function() {
+          document.getElementById('mobile-menu').classList.toggle('hidden');
+      });
+  </script>
+
+          </div>
     </header>
 
     <!-- main Section -->
@@ -50,7 +92,7 @@
       <!-- banner Section -->
       <section class="mx-auto mt-20">
             <!-- font section -->
-              <div class="relative h-screen  bg-cover bg-center w-full md:1/2 lg:1/2" style="background-image: url(c1-assets/cat-big.png);">
+              <div class="grid grid-cols-1 relative h-screen bg-cover bg-center w-full md:1/2 lg:1/2" style="background-image: url(c1-assets/cat-big.png);">
                </div>
               <div class="absolute inset-0 bg-white opacity-10"></div>
               <div class="absolute inset-0 flex flex-col md:flex-row items-center justify-start">
